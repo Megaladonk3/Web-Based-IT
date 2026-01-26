@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Tables &amp; Forms</title>
+
+  </head>
+
+  <body>
+    <form action="#" method="post">
+      <h1>Pizza Ordering Form</h1>
+
+      <h2>Contact Information</h2>
+      <label for="inName">Name:</label>
+      <input type="text" name="inName" id="inName"><br>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" name="phone" id="phone"><br>
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email"><br>
+
+      <h2>Select Pizza Size</h2>
+      <label for="pizzaSize">Pizza Size:</label>
+      <select name="pizza" id="pizzaSize">
+        <option value="">--Select Size--</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+        <option value="XLarge">XLarge</option>
+      </select><br>
+
+      <h2>Select Sauce</h2>
+      <input type="radio" id="marinara" name="sauce" value="Marinara">
+      <label for="marinara">Marinara</label> <br>
+
+      <input type="radio" id="ranch" name="sauce" value="Ranch">
+      <label for="ranch">Ranch</label> <br>
+
+      <input type="radio" id="noSauce" name="sauce" value="NoSauce">
+      <label for="noSauce">No Sauce</label> <br>
+
+      <h2>Select Toppings</h2>
+      <input type="checkbox" id="pepperoni" name="topping" value="Pepperoni">
+      <label for="pepperoni">Pepperoni</label>
+
+      <input type="checkbox" id="sausage" name="topping" value="Sausage">
+      <label for="sausage">Sausage</label> <br>
+
+      <input type="checkbox" id="mushroom" name="topping" value="Mushroom">
+      <label for="mushroom">Mushroom</label>
+
+      <input type="checkbox" id="pineapple" name="topping" value="Pineapple">
+      <label for="pineapple">Pineapple</label> <br>
+
+      <input type="checkbox" id="peppers" name="topping" value="Peppers">
+      <label for="peppers">Peppers</label>
+
+      <input type="checkbox" id="onions" name="topping" value="Onions">
+      <label for="onions">Onions</label> <br>
+
+      <h2>Additional Instructions</h2>
+      <textarea id="instructions" name="instructions" rows="2" cols="30" placeholder="Add instructions"></textarea> <br>
+
+      <input type="submit" value="Submit">
+    </form> <br><br>
+
+    <table border="1">
+      <caption>List of My Favorite Games</caption>
+      <tr>
+        <th>Developer</th>
+        <th>Title</th>
+        <th>Year</th>
+      </tr>
+      <tr>
+        <td>Bungie</td>
+        <td>Halo 4</td>
+        <td>2012</td>
+      </tr>
+      <tr>
+        <td>Infinity Ward</td>
+        <td>Call of Duty Black Ops</td>
+        <td>2010</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Nintendo</td>
+        <td>Super Mario Galaxy</td>
+        <td rowspan="2">2007</td>
+      </tr>
+      <tr>
+        <td>Mario &amp; Sonic at the Olympic Games</td>
+      </tr>
+      <tr>
+        <td colspan="3">Count: 4</td>
+      </tr>
+    </table>
+  </body>
+</html>
