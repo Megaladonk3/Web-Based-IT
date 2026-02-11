@@ -1,0 +1,180 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+}
+
+
+main {
+  margin-left: 260px;
+}
+
+
+nav#menuItems {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100vh;
+  background: #000;
+}
+
+
+nav#menuItems button {
+  width: 100%;
+  border: 1px solid #003;
+  background: #0b2cff;
+  color: #fff;
+  padding: 18px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  display: block;
+}
+
+
+nav#menuItems button:hover {
+  background: #b8860b;
+  color: #fff;
+}
+
+
+#jumpMenu {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  background: #b8860b;
+  display: none;
+}
+
+
+#recentArticles:hover + #jumpMenu,
+#jumpMenu:hover {
+  display: block;
+}
+
+#jumpMenu a {
+  display: block;
+  padding: 4px 18px;
+  text-decoration: none;
+  color: #0000cc;
+  font-size: 18px;
+}
+
+
+#jumpMenu a:hover {
+  background: #2c53ff;
+  color: #ffffff;
+}
+
+
+header {
+  background: #ff0000;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #b30000;
+}
+
+header p {
+  margin: 0;
+  font-size: 48px;
+  font-family: "Times New Roman", Times, serif;
+  color: #000;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 48px;
+  margin: 30px 0;
+}
+
+
+#container {
+  display: flex;
+  flex-wrap: wrap;            
+  gap: 40px;
+  padding: 0 60px 40px 60px;
+  align-items: flex-start;
+}
+
+
+article {
+  flex: 1 1 22%;             
+  min-width: 220px;
+
+  color: #c7c7c7;             
+  opacity: 0.85;
+
+  transition: color 2s, 
+              transform 2s, 
+              opacity 2s;
+}
+
+
+article:hover {
+  color: #222;
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+article h2 {
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+
+
+article > p:first-of-type::first-letter {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 36px;
+  line-height: 1;
+  float: left;
+  padding-right: 6px;
+}
+
+
+
+article > p:last-of-type,
+article > p:last-of-type a {
+  color: #1a33cc;
+  font-weight: 600;
+}
+
+
+a[href*="google.com"]::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-left: 8px;
+  vertical-align: -3px;
+  background: url("arrowarrow.png") no-repeat center / contain;
+}
+
+
+#thanks {
+  margin: 10px 60px 60px 60px;
+}
+
+#thanks a {
+  display: inline-block;
+  background: #8ec6ff;
+  border: 2px solid #2a6da8;
+  padding: 18px 26px;
+  font-size: 34px;
+  font-family: "Times New Roman", Times, serif;
+  color: #0017b8;
+}
+
+
+footer {
+  border-top: 2px solid #ddd;
+  padding: 20px 60px;
+}
