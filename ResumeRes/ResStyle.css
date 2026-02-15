@@ -1,0 +1,185 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f8;
+  color: #222;
+  padding: 20px;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+header p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+header a {
+  color: #1f7a3a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+nav ul {
+  list-style: none;
+  margin-top: 12px;
+}
+
+nav li {
+  margin: 6px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  background: #1f7a3a;
+  padding: 8px 14px;
+  display: inline-block;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+nav a:hover {
+  background: #155d2c;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #dddddd;
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #1f7a3a;
+  color: #1f7a3a;
+}
+
+h3 {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+ul {
+  padding-left: 18px;
+  margin-top: 8px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* =========================
+   DESKTOP LAYOUT
+========================= */
+@media (min-width: 900px) {
+
+  body {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 60px;
+    position: relative;
+  }
+
+  /* Green Vertical Accent Bar */
+  body::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 100%;
+    background-color: #1f7a3a;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  header nav ul {
+    display: flex;
+    gap: 15px;
+    margin-top: 0;
+  }
+
+  nav li {
+    margin: 0;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  /* Left Column */
+  #objective,
+  #education,
+  #experience,
+  #projects {
+    grid-column: 1;
+  }
+
+  /* Right Column */
+  #skills,
+  #certs {
+    grid-column: 2;
+  }
+
+  section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+}
