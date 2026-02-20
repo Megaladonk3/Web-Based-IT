@@ -4,9 +4,118 @@
         <title>Recent Journal Articles</title>
         <link rel="stylesheet" href="10_css.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src=""></script>
-    </head>
+		<script>
+  
+  function showFilter() {
+    const filterForm = document.getElementById("filterContent");
+    const newForm = document.getElementById("newContent");
 
+   
+    filterForm.style.display = "block";
+    newForm.style.display = "none";
+  }
+
+  function showAddNew() {
+    const filterForm = document.getElementById("filterContent");
+    const newForm = document.getElementById("newContent");
+
+    
+    filterForm.style.display = "none";
+    newForm.style.display = "flex";
+  }
+
+  
+  function filterArticles() {
+    const showOpinion = document.getElementById("opinionCheckbox").checked;
+    const showRecipe = document.getElementById("recipeCheckbox").checked;
+    const showUpdate = document.getElementById("updateCheckbox").checked;
+
+    const articles = document.querySelectorAll("#articleList article");
+
+    articles.forEach((article) => {
+      let shouldShow = true;
+
+      if (article.classList.contains("opinion") && !showOpinion) shouldShow = false;
+      if (article.classList.contains("recipe") && !showRecipe) shouldShow = false;
+      if (article.classList.contains("update") && !showUpdate) shouldShow = false;
+
+      article.style.display = shouldShow ? "" : "none";
+    });
+  }
+
+  
+  function addNewArticle() {
+    const title = document.getElementById("inputHeader").value.trim();
+    const text = document.getElementById("inputArticle").value.trim();
+
+    const opinionRadio = document.getElementById("opinionRadio");
+    const recipeRadio = document.getElementById("recipeRadio");
+    const lifeRadio = document.getElementById("lifeRadio");
+
+    let typeClass = "";
+    let markerText = "";
+
+    if (opinionRadio.checked) {
+      typeClass = "opinion";
+      markerText = "Opinion";
+    } else if (recipeRadio.checked) {
+      typeClass = "recipe";
+      markerText = "Recipe";
+    } else if (lifeRadio.checked) {
+      typeClass = "update";
+      markerText = "Update";
+    }
+
+    if (!title || !text || !typeClass) return;
+
+    const articleList = document.getElementById("articleList");
+
+    const article = document.createElement("article");
+    article.className = typeClass;
+    article.id = "user_" + Date.now();
+
+    const marker = document.createElement("span");
+    marker.className = "marker";
+    marker.textContent = markerText;
+
+    const h2 = document.createElement("h2");
+    h2.textContent = title;
+
+    const p = document.createElement("p");
+    p.textContent = text;
+
+    
+    const more = document.createElement("p");
+    const a = document.createElement("a");
+    a.href = "moreDetails.html";
+    a.textContent = "Read more...";
+    more.appendChild(a);
+
+    article.appendChild(marker);
+    article.appendChild(h2);
+    article.appendChild(p);
+    article.appendChild(more);
+
+    articleList.appendChild(article);
+
+    
+    filterArticles();
+
+    
+    document.getElementById("inputHeader").value = "";
+    document.getElementById("inputArticle").value = "";
+    opinionRadio.checked = false;
+    recipeRadio.checked = false;
+    lifeRadio.checked = false;
+  }
+
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    
+    showFilter();
+    filterArticles();
+  });
+</script>
     <body>
 
         <header>
