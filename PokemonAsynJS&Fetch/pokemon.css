@@ -1,0 +1,148 @@
+.hide{
+    display: none;
+}
+
+body{
+    background-color: peachpuff;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+    color: #333;
+    margin-block: 15px;
+}
+
+#userInput {
+    background-color: white;
+    padding-inline: 15px;
+    padding-block: 10px;
+    border-radius: 10px;
+    height: auto;
+    width: 700px;
+    margin-inline: auto;
+    margin-block: 20px;
+}
+
+h2{
+    font-size: 18px;
+    margin-block: 10px;
+    color: black;
+    text-align: center;
+}
+
+#input{
+    display: block;
+    margin-inline: auto;
+    padding-inline: 5px;
+    padding-block: 3px;
+    width: 50%;
+    font-size: 15px;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+}
+
+button{
+    display: block;
+    margin-inline: auto;
+    margin-block: 10px;
+    padding-inline: 10px;
+    padding-block: 5px;
+    font-size: 15px;
+    color: black;
+    background-color: lightgrey;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+}
+
+#pokemonInfo{
+    text-align: center;
+    padding: 15px;
+}
+
+#image{
+    display: block;
+    margin-inline: auto;
+    margin-block: 5px;
+    width: 250px;
+    height: 250px;
+}
+
+audio{
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+#pokemonMoves{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    margin-inline: auto;
+    margin-bottom: 15px;
+}
+
+.moves{
+    width: calc(50% - 7.5px);
+    padding: 5px;
+    font-size: 15px;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.teamMembers{
+    display: flex;
+    justify-content: center;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    gap: 10px;
+    width: 100%;
+    max-width: 550px;
+    height: 180px;
+    margin-inline: auto;
+    margin-bottom: -1px;
+}
+
+.imageContainer{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: black;
+    padding: 5px;
+}
+
+.imageContainer img{
+    width: 150px;
+    height: 150px;
+    image-rendering: pixelated;
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+}
+
+.movesList{
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    align-content: center;
+}
+
+.movesList ul{
+    font-size: 20px;
+    padding-left: 50px;
+}
